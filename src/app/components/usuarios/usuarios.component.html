@@ -1,0 +1,17 @@
+<h2>Usuarios</h2>
+<a routerLink="/agregar"> 
+	<button class="btn btn-primary" type="button">Crear Nuevo</button>
+</a>
+
+<table style="width:100%" >
+	<tr *ngFor="let usuario of usuarios">
+		<td routerLink="/detail/{{usuario.id}}"> 
+		<span>{{usuario.id}}</span> {{usuario.nombre}}
+		
+		</td>
+		<td>
+		<button class="btn btn-danger" type="button" title="Eliminar" (click)="delete(usuario)">Eliminar</button>
+		</td>
+
+	</tr>
+<br>

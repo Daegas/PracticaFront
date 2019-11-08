@@ -1,0 +1,37 @@
+
+<div *ngIf="usuario">
+
+    <h2>Mas info de {{usuario.nombre | uppercase}}</h2>
+    <div><span>id: </span>{{usuario.id}}</div>
+    <div>
+        <div>
+            <label>nombre:
+                <input [(ngModel)]="usuario.nombre" placeholder="nombre"/>
+              </label>
+        </div>
+      
+      <div>
+          <label>apellido:
+              <input [(ngModel)]="usuario.apellido" placeholder=""/>
+            </label>
+      </div>
+      
+      <div>
+          <label>edad:
+              <input [(ngModel)]="usuario.edad" placeholder="edad"/>
+            </label>
+      </div>
+      
+      <div>
+          <label>direccion:
+              <input [(ngModel)]="usuario.direccion" placeholder="direccion"/>
+            </label>
+      </div>
+      
+    </div>
+  
+  </div>
+  
+      <p><button (click)="goBack()">Regresar</button></p>
+      <p><button (click)="actualizar()">Actualizar Usuario</button></p>
+      

@@ -1,0 +1,53 @@
+<h2>Agregar Usuario</h2>
+
+<!-- <div>
+    <label>nombre:
+        <input #usuarionombre placeholder="nombre"/>
+      </label>
+</div>
+
+<div>
+  <label>apellido:
+      <input #usuarioapellido placeholder="apellido"/>
+    </label>
+</div>
+
+<div>
+  <label>edad:
+      <input #usuarioedad placeholder="edad"/>
+    </label>
+</div>
+
+<div>
+  <label>direccion:
+      <input #usuariodireccion placeholder="direccion"/>
+    </label>
+</div> -->
+<div *ngIf="usuario">
+<div>
+      <label>nombre:
+          <input [(ngModel)]="usuario.nombre" placeholder="nombre"/>
+        </label>
+  </div>
+
+<div>
+    <label>apellido:
+        <input [(ngModel)]="usuario.apellido" placeholder="apellido"/>
+      </label>
+</div>
+
+<div>
+    <label>edad:
+        <input [(ngModel)]="usuario.edad" placeholder="edad"/>
+      </label>
+</div>
+
+<div>
+    <label>direccion:
+        <input [(ngModel)]="usuario.direccion" placeholder="direccion"/>
+      </label>
+</div>
+</div>
+
+  <p><button (click)="crear()">Agregar Usuario</button></p>
+  <p><button (click)="goBack()">Regresar</button></p>
